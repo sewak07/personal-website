@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-icon" id="menuToggle">&#9776;</div>
+      </nav>
+  </header>
+  <main>
+    <div class="contact-container">
+      <h2>Get in Touch</h2>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="ed382907-0ae9-4bd3-874d-3976ba156381">
+  
+        <!-- Textboxes -->
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+  
+        <!-- Combo Box -->
+        <select name="subject" required>
+          <option value="">Select Subject</option>
+          <option value="collaboration">Collaboration</option>
+          <option value="freelance">Freelance Project</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select>
+
+        <!-- Radio Buttons: Gender -->
+<p class="radio-label">Gender:</p>
+<div class="radio-group">
+  <label><input type="radio" name="gender" value="Male" required> Male</label>
+  <label><input type="radio" name="gender" value="Female"> Female</label>
+  <label><input type="radio" name="gender" value="Other"> Other</label>
+</div>
+
+        <!-- Checkboxes -->
+        <p class="checkbox-label">Reason for Contact:</p>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="reason[]" value="Collaboration"> Collaboration</label>
+          <label><input type="checkbox" name="reason[]" value="Project"> Freelance Project</label>
+          <label><input type="checkbox" name="reason[]" value="Feedback"> Feedback</label>
+          <label><input type="checkbox" name="reason[]" value="Other"> Other</label>
+        </div>
+  
+        <!-- Textarea -->
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  
+        <!-- Hidden botcheck -->
+        <input type="checkbox" name="botcheck" style="display: none;">
+  
+        <!-- Button -->
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </main>
+  
+
+  <footer class="footer">
+    &copy; 2025 My Website | Made by Sewak Dhakal
+    <div class="socials">
+        <a href="https://github.com/sewak07" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com/aizewak" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> 
+        <a href="https://www.youtube.com/channel/UCuN5GSvsZio89TaPR38H3ww" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        
+      </div>
+  </footer>
+  <script>
+         const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+  </script>
+</body>
+</html>
